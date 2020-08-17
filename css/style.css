@@ -808,6 +808,7 @@ body {
     height: 44px;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
+    transition:  0.7s;
 }
 .social-list-item-link-icon{
     width: 20px;
