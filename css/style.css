@@ -181,7 +181,7 @@ body {
         url(../img/header-img/Header-img.jpg);
     background-repeat: no-repeat;
     padding-top: 200px;
-    padding-bottom: 170px;
+    padding-bottom: 200px;
 }
 .header-block {
     display: block;
@@ -755,7 +755,7 @@ body {
     height: 100%;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.2);
     z-index: 12;
 }
 .form:focus-within {
