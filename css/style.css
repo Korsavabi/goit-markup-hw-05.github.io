@@ -587,11 +587,13 @@ body {
     border: 1px solid var(--team-label-background);
     box-sizing: border-box;
     border-radius: 4px;
+    transition:  0.7s;
 }
 .client-item-list-link-icon{
     width: 45px;
     height: 50px;
     fill: #AFB1B8;
+    transition:  0.7s;
 }
 #icon-logo-four{
     width: 80px;
