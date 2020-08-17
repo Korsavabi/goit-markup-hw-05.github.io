@@ -180,8 +180,10 @@ body {
     background-image: linear-gradient(var(--text-background), var(--text-background)),
         url(../img/header-img/Header-img.jpg);
     background-repeat: no-repeat;
+    max-width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
+    margin: 0 auto
 }
 .header-block {
     display: block;
@@ -556,9 +558,7 @@ body {
 .project__text-hover{
     font-size: 18px;
     line-height: 1.556;
-
     letter-spacing: 0.03em;
-    
     color: var(--white-color);
 }
 .portfolio-list-item:hover .project-hover{
