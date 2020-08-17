@@ -145,6 +145,7 @@ body {
 }
 .address-link{
     display: flex;
+    vertical-align: middle;
     text-decoration: none;
     font-style: normal;
     font-weight: 500;
@@ -160,7 +161,7 @@ body {
     color: var(--accent-color);
 }
 .address-link-icon{
-    align-items: baseline;
+    
     width: 16px;
     height: 16px;
     margin-right: 10px;
