@@ -117,30 +117,45 @@ body {
 .navigation-list-item:not(:last-child) {
     margin-right: 50px;
 }
-.navigation-list-item-link {
-    text-decoration: none;
-    font-style: normal;
-    font-weight: 500;
-    letter-spacing: 0.02em;
-
-    color: var(--titles-text-color);
-}
-/* .navigation-list-item-link:hover,
-.navigation-list-item-link:focus {
-    color: var(--accent-color);
-    height: 4px;
-    border-bottom: 6px solid var(--accent-color);
-    border-radius: 2px;
-    padding-bottom: 24px;
-} */
-/* .navigation-list-item-link::after{
+/* .navigation-list-item::after{
     display: block;
     content: "";
     height: 2px;
     background-color: var(--accent-color);
     border-radius: 2px;
-    margin-top: 24px;
 } */
+.navigation-list-item-link {
+    position: relative;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    padding-bottom: 32px;
+
+    color: var(--titles-text-color);
+}
+.navigation-list .action {
+    color: var(--accent-color);
+}
+.navigation-list-item-link:hover,
+.navigation-list-item-link:focus {
+    color: var(--accent-color);
+    height: 4px;
+    border-radius: 2px;
+}
+.navigation-list .action::after
+{
+    /* display: block; */
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+}
 .address {
     display: flex;
     flex-wrap: wrap;
@@ -148,7 +163,7 @@ body {
 }
 .address-link{
     display: flex;
-    vertical-align: middle;
+    align-items: center;
     text-decoration: none;
     font-style: normal;
     font-weight: 500;
@@ -180,6 +195,7 @@ body {
     background-image: linear-gradient(var(--text-background), var(--text-background)),
         url(../img/header-img/Header-img.jpg);
     background-repeat: no-repeat;
+    background-size: contain;
     max-width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
@@ -255,6 +271,7 @@ body {
 .antenna::before{
     display: block;
     content: "";
+    /* fill: url("#icon-antenna"); */
     background-image: url("../img/about/Group.svg");
 }
 .clock::before{
@@ -320,16 +337,15 @@ body {
 .engage-list-item-text {
     font-style: normal;
     font-weight: bold;
-    text-align: center;
     letter-spacing: 0.03em;
     text-transform: uppercase;
 
     position: absolute;
+    text-align: center;
     bottom: 0;
 
     width: 100%;
     padding: 27px 0;
-    margin: auto;
 
     color: var(--white-color);
     background-color: var(--text-background);
@@ -427,7 +443,6 @@ body {
 .client-list{
     display: flex;
 }
-
 .client-list-item{
     display: flex;
     flex-wrap: wrap;
@@ -557,7 +572,7 @@ body {
     padding: 64px 24px 64px 24px;
 }
 .project__text-hover{
-    font-size: 18px;
+    font-size: 14pt;
     line-height: 1.556;
     letter-spacing: 0.03em;
     color: var(--white-color);
@@ -672,7 +687,6 @@ body {
     width: 20px;
     height: 20px;
     fill: var(--white-color);
-   
 }
 .social-list-item-link:hover{
     background-color: var(--accent-color);
@@ -721,9 +735,7 @@ body {
     font-size: 16px;
     line-height: 1.875;
     display: flex;
-    vertical-align: middle;
 
-    text-decoration: none;
     align-items: center;
     text-align: center;
     letter-spacing: 0.06em;
@@ -751,28 +763,32 @@ body {
 
 /* =================================form================================ */
 .form {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.2);
-    z-index: 12;
+    /* z-index: 12; */
 }
 .form:focus-within {
     box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
 }
 .backdrop.is-hidden {
     visibility: hidden;
+    /* pointer-events: none; */
     opacity: 0;
-    pointer-events: none;
+    overflow: scroll;
 }
 .modal {
     width: 528px;
-    height: 581px;
+    height: auto;
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
     top: 100px;
-    left: 550px;
+   /*  left: 550px; */
     padding: 40px;
     background-color: var(--white-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -785,24 +801,26 @@ body {
     line-height: 1.15;
     text-align: center;
     letter-spacing: 0.03em;
-    margin-top: 12px;
     margin-bottom: 20px;
 
     color: var(--titles-text-color);
 }
-.form-field {
-    display: block;
+.form-label {
+    width: 100%;
+    position: relative;
     margin-bottom: 20px;
 }
-.form__label {
-    display: block;
-    margin-bottom: 4px;
+.form-name {
+    padding-bottom: 4px;
     font-style: normal;
     font-weight: normal;
+    font-size: 12px;
+    line-height: 1.666;  
     letter-spacing: 0.01em;
 }
 
 .form-input {
+    width: 100%;
     height: 40px;
     box-sizing: border-box;
     border: 1px solid rgba(33, 33, 33, 0.2);
@@ -811,12 +829,19 @@ body {
     font-size: 16px;
     outline: none;
 }
+.form-input {
+    padding-left: 37px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
 .form__comment {
+    width: 100%;
+    height: 120px;
     padding: 12px 16px;
     border-radius: 4px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     outline: none;
-    /* resize: none; */
+    resize: none;
 }
 
 .form-icon {
@@ -824,9 +849,10 @@ body {
     height: 12px;
     fill: var(--titles-text-color);
     position: absolute; 
+    top: 34px;
+    left: 15px; 
     z-index: 1;
     box-sizing: content-box;
-    padding: 12px 14px;
 }
 .form__checkbox{
     font-style: normal;
@@ -839,14 +865,16 @@ body {
     letter-spacing: 0.03em;
 }
 .form__checkbox a {
-    font-weight: 600;
+    font-weight: normal;
+    line-height: 1.714;
     color: var(--accent-color);
 }
-.form-icon + .form-input {
+/* .form-icon + .form-input {
     padding-left: 37px;
-}
-.form-field:focus-within .form-icon,
-.form-field:focus-within .form__label {
+} */
+
+.form-label:focus-within .form-icon,
+.form-label:focus-within .form-name {
     fill: var(--accent-color);
     color: var(--accent-color);
 }
@@ -867,13 +895,10 @@ body {
     box-sizing: border-box;
     border-radius: 50px;
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 8px;
+    right: 8px;
 
     cursor: pointer;
-
-    font-weight: bold;
-    font-style: normal;
 }
 .form-btn-close{
     width: 11px;
@@ -886,6 +911,6 @@ body {
     fill: var(--accent-color);
 }
 .btn-send{
-    margin-left: 164px;
+    margin: 0 auto;
 }
 /* =================================form================================ */

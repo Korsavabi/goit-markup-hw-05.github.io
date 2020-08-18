@@ -16,7 +16,7 @@
             <a href="index.html" class="header__logo"  lang="en"><span>Web</span>Studio</a>
             <nav class="navigation">
                 <ul class="navigation-list">
-                    <li class="navigation-list-item"><a href="index.html" class="navigation-list-item-link transition">Студия</a>
+                    <li class="navigation-list-item"><a href="index.html" class="navigation-list-item-link transition action">Студия</a>
                     </li>
                     <li class="navigation-list-item"><a href="portfolio.html"
                             class="navigation-list-item-link transition">Портфолио</a></li>
@@ -366,7 +366,7 @@
         </div>
     </footer>
     <section>
-        <form action="form" class="form backdrop is-hidden transition"  data-modal>
+        <form action="#" class="form backdrop is-hidden transition"  data-modal>
             <div class="modal">
                 <button type="button" class="btn-close transition" data-modal-close>
                     <svg class="form-btn-close transition">
@@ -374,41 +374,39 @@
                     </svg>
                 </button>
                 <h3>Оставьте свои данные, мы вам перезвоним</h3>
-                <label for="form-name" class="form-field">
-                    <span class="form__label">Имя</span>
+                <label for="form-name" class="form-label">
+                    <span class="form-name">Имя</span>
                     <svg class="form-icon">
                         <use href="img/header-img/sprite.svg#icon-user"></use>
                     </svg>
-                    <input type="text" required size="50" id="form-name" class="form-input">
+                    <input type="text" required name="user-name" placeholder="Имя*" id="form-name" class="form-input">
                 </label>
-                <label for="form-tel" class="form-field">
-                    <span class="form__label">Телефон</span>
+                <label for="form-tel" class="form-label">
+                    <span class="form-name">Телефон</span>
                     <svg class="form-icon">
                         <use href="img/header-img/sprite.svg#icon-telephone"></use>
                     </svg>
-                    <input type="text" required size="50" id="form-tel" name="telephone" class="form-input" />
+                    <input type="tel" name="user-phone" required placeholder="Телефон*" id="form-tel"  class="form-input" />
                 </label>
-                <label for="form-email" class="form-field">
-                    <span class="form__label">E-mail</span>
+                <label for="form-email" class="form-label">
+                    <span class="form-name">E-mail</span>
                     <svg class="form-icon">
                         <use href="img/header-img/sprite.svg#icon-email"></use>
                     </svg>
-                    <input type="email" required size="50" class="form-input" id="form-email">
+                    <input type="email" required name="user-email" placeholder="testtest@test.com*" class="form-input" id="form-email">
                 </label>
-                <label for="form-comment" class="form-field">
-                    <span class="form__label">Комментарий</span>
-                    <textarea name="comment" cols="61" rows="3" id="form-comment" class="form__comment"></textarea>
+                <label for="form-comment" class="form-label">
+                    <span class="form-name">Комментарий</span>
+                    <textarea name="user-message" placeholder="Оставьте комментарий" id="form-comment" class="form__comment"></textarea>
                 </label>
-                <label for="form-checkbox" class="form-field form__checkbox">
-                    <input type="checkbox" id="form-checkbox" required class="form__checkbox">
-                    Соглашаюсь с рассылкой и принимаю <a href="#">Условия договора</a>
+                <label for="form-checkbox" class="form-label form__checkbox">
+                    <input type="checkbox" name="user-checkbox" id="form-checkbox" value="Соглашаюсь с рассылкой и принимаю Условия договора" required class="form__checkbox">
+                    Соглашаюсь с рассылкой и принимаю <a href="#" target="_blanck">Условия договора</a>
                 </label>
-                <button type="button" class="btn btn-send">Отправить</button>
+                <button type="submit" class="btn btn-send">Отправить</button>
             </div>
         </form>
     </section>
     <script src="js/modal.js"></script>
-    <!-- <script src="js/burger.js"></script> -->
 </body>
-
 </html>
